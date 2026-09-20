@@ -1,0 +1,153 @@
+\documentclass[reprint,amsmath,amssymb,aps,prl,floatfix,onecolumn]{revtex4-2}
+\usepackage[brazilian]{babel}
+\usepackage[T1]{fontenc} 
+\usepackage{graphicx}% Include figure files
+\usepackage{dcolumn}% Align table columns on decimal point
+\usepackage{bm}% bold math
+\usepackage{multirow}
+%\usepackage{hyperref}
+\usepackage{subfigure}
+\usepackage{color}
+\usepackage[normalem]{ulem}
+\usepackage{float}
+\usepackage{cprotect}
+\usepackage{colortbl}
+\usepackage{todonotes}
+
+\begin{document}
+%a inclusão da capa é opcional, só será corrido a partir da página seguinte.
+\input{capa.tex}
+
+	
+	\title{Título escolhido para o relatório}% Force line breaks with \\
+	
+	%\thanks{A footnote to the article title}%
+	\author{Aluno I}
+	\email{email@ita.br}
+	\affiliation{Instituto Tecnológico de Aeronáutica, S\~{a}o José dos Campos, Brasil}
+	\author{Aluno II}
+	\affiliation{Instituto Tecnológico de Aeronáutica, S\~{a}o José dos Campos, Brasil}
+	\author{Aluno III}
+	\affiliation{Instituto Tecnológico de Aeronáutica, S\~{a}o José dos Campos, Brasil}
+	\author{Aluno IV}
+	\affiliation{Instituto Tecnológico de Aeronáutica, S\~{a}o José dos Campos, Brasil}
+	\author{Aluno V}
+	\affiliation{Instituto Tecnológico de Aeronáutica, S\~{a}o José dos Campos, Brasil}
+	
+	
+	\date{\today}
+	
+	\begin{abstract}
+		\textit{Aqui se coloca o resumo do artigo, o que foi feito, como foi feito e o resultado mais importante obtido (quantitativo se houver). O resumo do artigo é uma parte que se desprende do restante do texto. No título coloque algo que remeta ao experimento como por exemplo: ``Verificação experimental da Lei de Hooke'', mas que não seja grande demais. \textbf{A capa não é considerada na correção do relatório mas pode ser incluída. Mesmo incluindo a capa, a página seguinte deve conter título, nome dos autores, afiliação e resumo.}}  
+	\end{abstract}
+	
+%\todo{Nota 1,0}	
+	
+	\maketitle
+
+%\todo{Nota 2,0}	
+\section{Introdução}
+	
+Na introdução deve-se incluir uma revisão teórica sobre a física por trás do experimento realizado e a importância do mesmo. Um contexto histórico também é importante. Além disso é importante destacar qual é a pergunta, ou o problema que queremos resolver com esse experimento. Dedução de equações utilizadas também são colocadas aqui. A seguir temos a segunda Lei de Newton mostrada na Eq. \ref{eq1}, como exemplo de como uma equação deve ser escrita. Em \LaTeX, ela pode ser citada usando um ``label'' de forma que a numeração seja organizada automaticamente. Isso também funciona para figuras, tabelas, seções, etc.  
+
+\begin{equation}
+	\label{eq1}
+	\vec{F}=m\vec{a}
+\end{equation}
+Onde $\vec{F}$ é a força resultante sobre um corpo, $m$ sua massa e $\vec{a}$ sua aceleração adquirida.
+\vspace{12pt}
+
+
+É \textbf{imprescindível} (lê-se perde nota) incluir aqui as citações das referências bibliográficas utilizadas na revisão teórica e histórica. Esse é um exemplo de citação de um artigo científico muito importante\cite{Matusalem2022} que aplica modelos de redes neurais e \textit{machine learning} em simulação atomística de materiais, recomenda-se a leitura! :D (Interesse em iniciação científica entre em contato com o professor.) A indicação da referência feita por um número entre colchetes ou (autor,ano) deve vir ao final da frase ou no meio dela, e descrita por completo na seção Referências no final do artigo . Ao final da introdução se menciona o objetivo do experimento.
+
+
+%\todo{Nota 2,0}	
+\section{Metodologia}
+
+Nesta parte colocamos toda a metodologia utilizada, incluindo a descrição do experimento, os aparelhos utilizados, como as medições foram feitas e em qual ordem. \textbf{Evitem escrever essas informações em forma de itens e usar subtítulos.} Atentem-se para os erros experimentais. Anotem os erros de cada aparelho de medição e não se esqueçam de propagar os erros quando necessário. Maiores detalhes podem ser encontrados na referência [\onlinecite{Vuolo1996}]. A ideia geral da metodologia é proporcionar que o leitor consiga reproduzir o experimento com as mesmas características. No entanto, não é preciso por exemplo dar detalhes minuciosos demais, como por exemplo, quais teclas apertou no teclado do computador ou como configurou o software. Esse tipo de informação pode ser encontrada no manual do equipamento.\textbf{ Também não se deve incluir fotos dos equipamentos e montagem experimental.} Em casos de experimentos mais complexos, o ideal é incluir um esquema genérico da montagem e não uma foto. Detalhes da amostra que se está estudando são importantes. Por exemplo, ao se medir a constante de restauração de uma mola, informações como comprimento relaxado, diâmetro, material que constitui a mola, número de espiras, etc, são importantes. Tente sempre ser o mais sucinto possível, mas sem deixar detalhes importantes faltando. A seção de metodologia não deve ser mais extensa que a seção de resultados e discussão.  
+
+%\todo{Nota 4,0}
+\section{Resultados e discussão}	
+	
+Aqui os resultados devem ser mostrados através de tabelas e gráficos. A Tabela \ref{tab1} é um exemplo. Na Figura \ref{fig1} temos um exemplo de figura.  Também dever ser feita uma discussão sobre os resultados obtidos, analisando se os mesmo estão de acordo com o esperado e em caso contrário porque não estão. Lembre-se que um resultado errado também é um resultado. O importante é entender onde houve falha e como resolver. A apresentação dos resultados e a discussão são feitos simultaneamente. Não se separa em parte de resultados e parte de discussão. 
+
+\begin{table}[htb]
+	\caption{\label{tab1} Esse é um exemplo de tabela. Dado 1, Dado 2 e Dado 3, representam blablabla, respectivamente. Se os erros das medidas são todos iguais é melhor indicá-los no topo da tabela. }
+	\begin{tabular}{c|c|c}
+		\hline\hline
+		\textbf{Dado 1 (unidade)} & \textbf{Dado 2 (unidade)} & \textbf{Dado 3 (unidade)} \\ \hline
+		  xxx $\pm$ erro   &   xxx $\pm$ erro   &   xxx $\pm$ erro   \\
+		  xxx $\pm$ erro   &   xxx $\pm$ erro   &   xxx $\pm$ erro   \\
+		  xxx $\pm$ erro   &   xxx $\pm$ erro   &   xxx $\pm$ erro   \\\hline\hline 
+	\end{tabular}
+\end{table}
+
+
+\begin{figure}[htp]
+	\includegraphics[width=0.5\linewidth]{LogoITA.jpg}
+	\caption{\label{fig1} Esse é um exemplo de figura. }
+\end{figure}
+
+
+
+Algumas dicas gerais na confecção do relatório:
+
+\begin{itemize}
+	
+	\item Tenha sempre em mente que o leitor não conhece o experimento e nem o roteiro. Não é para o professor que você está escrevendo o relatório. 
+	
+	\item Sempre defina os termos usados nas equações e sempre numere as equações. 
+	
+	\item \textbf{Em geral em artigos não se inclui tabela com resultados brutos.} \textbf{Mas no caso do relatório eu quero que inclua para que eu possa conferir os resultados.} 
+	
+	\item As legendas das tabelas e figuras devem explicar o conteúdo da mesma completamente. 
+	
+	\item Gráficos devem ter legendas, título dos eixos e unidades.
+	
+	\item A legenda da tabela deve explicar o que cada sigla representa. Erros devem ser apresentados.
+	
+	\item Legendas de tabelas sempre em cima da tabela e  de figuras sempre embaixo da figura.
+	
+	\item Evitem incluir muitas figuras e tabelas. Juntem em uma só sempre que possível. 
+	
+	\item Figuras com mais de um painel devem ter uma única legenda com cada painel identificado por letras do alfabeto. 
+	
+    \item Todas as figuras e legendas incluídas devem ser citadas pelo seu número e comentadas no texto. 
+
+	\item Siglas devem ser definidas na legenda da tabela. 
+
+	\item Não se começa seção com tabela ou figura, sempre com texto.
+	
+	\item O texto deve ser escrito usando-se alinhamento justificado. 
+	
+	\item Dados experimentais devem sempre ser acompanhados dos seus erros, inclusive nas tabelas. Não misturem erros sistemáticos com erros estatísticos. 
+	
+	\item A análise estatística dos dados é importante, incluindo a análise da distribuição dos resíduos.
+	
+	\item O texto pode ser escrito em uma ou duas colunas.
+	
+	\item Não se usa sumário em artigo científico a não ser que seja um \textit{review}.
+	
+	\item A definição dos erros experimentais considerados deve ser bem explicada na metodologia.
+	
+	\item O relatório não precisa ser extenso mas precisa descrever bem o que foi feito, os resultados obtidos e conter uma boa análise dos resultados.
+	
+	\item Se houve algum erro experimental grave, não ignore ou esconda esse erro. Faça a análise dos dados e tente encontrar a fonte do erro e possíveis maneiras de contornar o problema. Uma boa discussão de um resultado experimental errado vale tanta nota, ou até mais, quanto de um resultado experimental bom.  
+	  
+	\item No resumo, não inclua citações de referências de forma numérica como no texto. Se for essencial colocar referência no resumo faça a citação explícita.
+	
+\end{itemize}
+
+
+%\todo{Nota 1,0}
+\section{Conclusão}	
+	
+Como o nome sugere, a conclusão é um resumo dos resultados obtidos no experimento. Na conclusão é onde se responde a pergunta que foi feita na introdução. Novamente aqui se menciona explicitamente  e quantitativamente os principais resultados encontrados.
+	
+\section*{Referências}
+\bibliographystyle{apsrev4-2}
+	
+\bibliography{library}	
+	
+	
+\end{document} 
